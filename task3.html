@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body3">
+    <a href="classtask.html"><h6>Back to home </h6></a>
+    <div class="cont3">
+        <div class="captcha">
+            <h3>Captcha Generator</h3>
+            <!-- <label for="">Captcha : 
+    
+            </label><br><br> -->
+            <div class="captcha-output">
+    
+            </div> <br> <br>
+            <button class="captcha-btn">Generate Captcha</button>
+        
+        </div>
+
+    </div>
+   
+
+
+    <script >
+        
+let captchaBtn = document.querySelector(".captcha-btn");
+let captchaBox = document.querySelector(".captcha-output");
+captchaBtn.addEventListener("click",()=>{
+    let arr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",1,2,3,4,5,6,7,8,9,0];
+    let arr2 = [];
+    for (let i=0; i<6; i++){
+        let letter = Math.round(Math.random()*arr.length);
+        arr2[i] = arr[letter];
+    }
+    let result = arr2.join("");
+    captchaBox.innerHTML = result;  
+})
+    </script>
+    
+</body>
+</html>

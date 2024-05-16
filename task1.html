@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body1">
+
+<a href="classtask.html"><h6>Back to home </h6></a>
+
+    <div class="cont">
+        <div class="box1">
+            <form action="">
+                <label for="">USERNAME <br> <br>
+                    <input type="text" class="username" placeholder="Enter Username"><br>
+                </label><br>
+                <label for="">PASSWORD <br><br>
+                    <input type="password" class="password" placeholder="Enter Password"><br>
+                </label><br>
+                <button class="login-btn">Log In</button>
+            </form>
+
+        </div>
+        <div class="box2">
+            <div class="login-output">
+                Login Information :-
+             </div>
+    
+        </div>
+
+    </div>
+   
+    
+
+
+    <script >
+        let loginBtn = document.querySelector(".login-btn");
+let loginOutput = document.querySelector(".login-output");
+
+loginBtn.addEventListener("click",(event)=>{
+    event.preventDefault();
+    let username = document.querySelector(".username");
+    let password = document.querySelector(".password");
+    loginOutput.innerHTML = `Login Information :- <br> <br> <br> <br> <br> Username  = ${username.value} <br> <br> Password  = ${password.value}`;  
+})
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body2">
+    <a href="classtask.html"><h6>Back to home </h6></a>
+
+    <div class="cont2">
+        <div class="color-change">
+            <h2>Color Generator</h2>
+            <div class="box"></div>
+            <button class="color-btn">Change Color</button>
+        </div>
+
+    </div>
+   
+
+
+    <script >
+        
+let colorBtn = document.querySelector(".color-btn");
+let arr = ["red","green","yellow","pink","voilet","blue","aqua","orange"];
+let colorBox = document.querySelector(".box");
+
+colorBtn.addEventListener("click",()=>{
+        let color = arr[Math.floor(Math.random()*arr.length)];
+        colorBox.style.backgroundColor = color;
+})
+    </script>
+    
+</body>
+</html>
